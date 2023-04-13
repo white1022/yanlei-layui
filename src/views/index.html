@@ -1,0 +1,105 @@
+
+<div class="layui-fluid">
+  <div class="layui-row layui-col-space15">   
+    <div class="layui-col-sm6 layui-col-md3">
+      <div class="layui-card">
+        <div class="layui-card-header">
+          用户量
+          <span class="layui-badge layui-bg-blue layuiadmin-badge">全部</span>
+        </div>
+        <div class="layui-card-body layuiadmin-card-list">
+          <p class="layuiadmin-big-font" id="userCount"></p>
+          <p>
+            总计注册的用户 
+            <span class="layuiadmin-span-color"><i class="layui-icon">&#xe756;</i></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="layui-col-sm6 layui-col-md3">
+      <div class="layui-card">
+        <div class="layui-card-header">
+          商品量
+          <span class="layui-badge layui-bg-blue layuiadmin-badge">全部</span>
+        </div>
+        <div class="layui-card-body layuiadmin-card-list">
+
+          <p class="layuiadmin-big-font" id="goodsCount"></p>
+          <p>
+            总计添加的商品
+            <span class="layuiadmin-span-color"><i class="layui-icon">&#xe756;</i></span>
+          </p>
+        </div>
+      </div>
+    </div> 
+    <div class="layui-col-sm6 layui-col-md3">
+      <div class="layui-card">
+        <div class="layui-card-header">
+          订单量
+          <span class="layui-badge layui-bg-blue layuiadmin-badge">全部</span>
+        </div>
+        <div class="layui-card-body layuiadmin-card-list">
+
+          <p class="layuiadmin-big-font" id="orderCount"></p>
+          <p>
+            总计用户的订单
+            <span class="layuiadmin-span-color"><i class="layui-icon">&#xe756;</i></span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="layui-col-sm12">
+      <div class="layui-card">
+        <div class="layui-card-header">数据概览</div>
+        <div class="layui-card-body">
+          <div class="layui-row">
+            <div class="layui-col-sm12">
+              <div class="layui-carousel layadmin-carousel layadmin-dataview" data-anim="fade" lay-filter="LAY-index-dataview">
+                <div carousel-item id="LAY-index-dataview">
+                  <div><i class="layui-icon layui-icon-loading1 layadmin-loading"></i></div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="layui-col-sm12">
+      <div class="layui-card">
+        <div class="layui-card-header">
+          技术支持
+          <i class="layui-icon layui-icon-tips" lay-tips="要尊重他人的劳动成果噢" lay-offset="5"></i>
+        </div>
+        <div class="layui-card-body layui-text layadmin-text">
+          <blockquote class="layui-elem-quote">
+            <p>公司名称 : 家里蹲有限公司</p>
+            <p>网站官网 : www.jialidun.com</p>
+            <p>联系电话 : 123456789</p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+//加载 controller 目录下的对应模块
+/*
+
+  小贴士：
+    这里 console 模块对应 的 console.js 并不会重复加载，
+    然而该页面的视图则是重新插入到容器，那如何保证能重新来控制视图？有两种方式：
+      1): 借助 layui.factory 方法获取 console 模块的工厂（回调函数）给 layui.use
+      2): 直接在 layui.use 方法的回调中书写业务代码，即:
+          layui.use('console', function(){ 
+            //同 console.js 中的 layui.define 回调中的代码 
+          });
+          
+  这里我们采用的是方式1。其它很多视图中采用的其实都是方式2，因为更简单些，也减少了一个请求数。
+  
+*/
+layui.use('console', layui.factory('console'));
+</script>
+
